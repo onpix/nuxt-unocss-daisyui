@@ -11,9 +11,6 @@ export default defineNuxtConfig({
     classSuffix: '',
     dataValue: 'theme',
   },
-  // purgecss: {
-  //     enabled: true,
-  // },
 
   plugins: [],
 
