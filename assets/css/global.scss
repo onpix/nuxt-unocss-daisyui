@@ -1,0 +1,160 @@
+//@import '@kidonng/daisyui/index.css';
+@import '@kidonng/daisyui/base/index.css';
+@import '@kidonng/daisyui/components/index.css';
+@import '@kidonng/daisyui/utilities/index.css';
+
+:root {
+  --rounded-box: 1rem;
+  --rounded-btn: 0.5rem;
+  --rounded-badge: 1.9rem;
+  --animation-btn: 0.25s;
+  --animation-input: .2s;
+  --btn-text-case: uppercase;
+  --btn-focus-scale: 0.95;
+  --border-btn: 1px;
+  --tab-border: 1px;
+  --tab-radius: 0.5rem;
+}
+
+[data-theme=light] {
+  //old: 	--p: 212, 100%, 51%;
+  --p: 222, 70%, 45%;
+  //--p: 212, 95%, 45%;
+  --pf: 212, 100%, 41%;
+  --sf: 247, 47%, 35%;
+  --af: 310, 49%, 42%;
+  --nf: 217, 92%, 8%;
+  --pc: 212, 100%, 90%;
+  --sc: 247, 100%, 89%;
+  --ac: 310, 100%, 90%;
+  --nc: 217, 100%, 82%;
+  --inc: 192, 100%, 16%;
+  --suc: 182, 100%, 13%;
+  --wac: 32, 100%, 17%;
+  --erc: 0, 100%, 14%;
+  --s: 247, 47%, 43%;
+  --a: 310, 49%, 52%;
+  --n: 217, 92%, 10%;
+  --b1: 0, 0%, 100%;
+  --b2: 217, 100%, 97%;
+  --b3: 219, 44%, 92%;
+  --bc: 214, 30%, 32%;
+  //--in: 192, 93%, 78%;
+  --in: 192, 93%, 78%;
+  --su: 182, 47%, 66%;
+  --wa: 32, 62%, 84%;
+  --er: 0, 63%, 72%;
+}
+
+[data-theme=dark] {
+  --p: 198, 93%, 60%;
+  --pf: 198, 93%, 48%;
+  --sf: 234, 89%, 59%;
+  --af: 329, 86%, 56%;
+  --b2: 222, 47%, 10%;
+  --b3: 222, 47%, 9%;
+  --bc: 222, 66%, 82%;
+  --pc: 198, 100%, 12%;
+  --sc: 234, 100%, 15%;
+  --ac: 329, 100%, 14%;
+  --nc: 217, 76%, 83%;
+  --inc: 198, 100%, 10%;
+  --suc: 172, 100%, 10%;
+  --wac: 41, 100%, 13%;
+  --erc: 351, 100%, 14%;
+  --s: 234, 89%, 74%;
+  --a: 329, 86%, 70%;
+  --n: 217, 33%, 17%;
+  --nf: 217, 30%, 22%;
+  --b1: 222, 47%, 11%;
+  --in: 198, 90%, 48%;
+  --su: 172, 66%, 50%;
+  --wa: 41, 88%, 64%;
+  --er: 351, 95%, 71%;
+}
+
+
+:root {
+  --no-use-color-platte: #f3f7ff;
+  --base-125: rgba(246, 247, 248, 0.53);
+  --base-150: #f5f7fb;
+  //--base-150: #eeeff2;
+  --base-400: #ced5e4;
+
+  --index-bg-lg: url("/imgs/bg/home-bg-light.svg") repeat top left / 37%;
+  --index-bg-sm: url("/imgs/bg/home-bg-light.svg") repeat top left / 100%;
+  --paper-bg-lg: var(--index-bg-lg);
+  --paper-bg-sm: var(--index-bg-sm);
+
+  --blog-bg-lg: url("/imgs/bg/blog-bg-light.svg") repeat top left / 28%;
+  --blog-bg-sm: var(--blog-bg-lg);
+
+  //@layer components {
+  //.custom-badge {
+  //  @apply badge badge-outline badge-md;
+  //  //}
+  //}
+}
+
+.dark {
+  --base-125: #202a40;
+  --base-150: #202a40;
+  --base-400: #253047;
+
+  --index-bg-lg: url("/imgs/bg1.png") no-repeat top right / 120%;
+  --index-bg-sm: url("/imgs/bg1.png") no-repeat top / 300%;
+
+  --paper-bg-lg: var(--index-bg-lg);
+  --paper-bg-sm: var(--index-bg-sm);
+
+  --blog-bg-lg: url("/imgs/bg/blog-bg-dark.svg") repeat top left / 15%;
+  --blog-bg-sm: var(--blog-bg-lg);
+
+  //@layer components {
+  //.custom-badge {
+  //  @apply badge badge-info badge-md shadow-lg shadow-cyan-400/40
+  //}
+}
+
+
+//.dyn-link {
+//  background: linear-gradient(0deg, hsl(var(--p)), hsl(var(--p))) no-repeat right bottom / 0 2px;
+//  transition: background-size 350ms;
+
+//
+//  &:hover {
+//    background-size: 100% 2px;
+//    background-position-x: left;
+//  }
+//
+//  padding-bottom: 1px;
+//}
+
+.dyn-link {
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    padding-bottom: 3px;
+    border-radius: 4px;
+    background-color: hsl(var(--p));
+    bottom: -2px;
+    opacity: 80%;
+    left: 0;
+    transform-origin: center;
+    transform: scaleX(0);
+    transition: transform .24s;
+  }
+
+  &:hover::before {
+    transform-origin: center;
+    transform: scaleX(1);
+  }
+}
+
+h1, h2, h3, h4, h5, h6, p, a, div {
+  color: hsl(var(--bc))
+}
